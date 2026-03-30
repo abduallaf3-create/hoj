@@ -86,6 +86,24 @@ export const botConfig = {
   // =========================
   // IMPORTANT: This is the SINGLE SOURCE OF TRUTH for all bot colors
   embeds: {
+    // ... (نهاية قسم الـ embeds)
+  },
+
+  // =========================
+  // MUSIC & VOICE SETTINGS
+  // =========================
+  music: {
+    stayInVideoChannel: true, 
+    leaveOnEmpty: false,
+    leaveOnEnd: false,
+    leaveOnStop: false,
+  },
+
+  // =========================
+  // ECONOMY SETTINGS
+  // =========================
+  economy: {
+  // ... (بقية الكود)
     colors: {
       // Main brand colors.
       primary: "#336699", 
@@ -133,6 +151,25 @@ export const botConfig = {
         high: "#f1c40f",
         urgent: "#e74c3c",
       },
+      // =========================
+  // MUSIC & VOICE SETTINGS
+  // =========================
+  music: {
+    // يجعل البوت يبقى في الروم الصوتي 24/7 حتى لو توقفت الموسيقى
+    stayInVideoChannel: true, 
+    
+    // هل يخرج البوت إذا كان الروم فارغاً؟ (false تعني سيبقى وحيداً)
+    leaveOnEmpty: false,
+    
+    // هل يخرج البوت عند انتهاء قائمة التشغيل؟
+    leaveOnEnd: false,
+    
+    // هل يخرج البوت إذا توقفت الموسيقى يدوياً؟
+    leaveOnStop: false,
+
+    // الروم الافتراضي (يمكنك وضع ID الروم هنا إذا أردت تثبيته)
+    defaultVoiceChannel: process.env.DEFAULT_VOICE_ID || null,
+  },
     },
     footer: {
       // Default footer text used in bot embeds.
@@ -154,6 +191,13 @@ export const botConfig = {
   // ECONOMY SETTINGS
   // =========================
   economy: {
+    music: {
+    stayInVoiceChannel: true, 
+    leaveOnEmpty: false,
+    leaveOnEnd: false,
+    leaveOnStop: false,
+    twentyFourSeven: true,
+  },
     currency: {
       // Currency display name.
       name: "coins",
